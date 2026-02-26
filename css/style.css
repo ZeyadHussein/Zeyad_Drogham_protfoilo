@@ -11,33 +11,26 @@ body {
 
 .section {
   padding: 80px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.section.show-section {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-title {
   text-align: center;
   font-weight: bold;
   margin-bottom: 40px;
+  font-size: 36px;
 }
 
-.project-card {
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-#skills i {
-  font-size: 40px;
+.section-title i {
   color: #0d6efd;
-  margin-bottom: 10px;
-}
-/* ===== Projects Section ===== */
-#projects {
-  background: #f8f9fa;
+  margin-right: 8px;
 }
 
 .project-card {
@@ -50,9 +43,10 @@ body {
   position: relative;
   overflow: hidden;
 }
-.project-card .badge {
-  margin-right: 5px;
-  font-size: 12px;
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .project-card::before {
@@ -65,59 +59,12 @@ body {
   background: linear-gradient(to right, #0d6efd, #6610f2);
 }
 
-.project-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.project-card .card-body {
-  padding: 30px;
-}
-
-.project-card h5 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.project-card h5 i {
-  font-size: 22px;
+#skills i {
+  font-size: 40px;
   color: #0d6efd;
+  margin-bottom: 10px;
 }
 
-.project-card p {
-  color: #555;
-  line-height: 1.7;
-  font-size: 15px;
-}
-
-.section-title {
-  font-size: 36px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-title i {
-  color: #0d6efd;
-  margin-right: 8px;
-}
-
-.no-underline {
-  text-decoration: none;
-  color: inherit;
-}
-.project-card {
-  transition: 0.3s ease;
-  border-radius: 15px;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
 .scroll-top-btn {
   position: fixed;
   bottom: 20px;
@@ -137,13 +84,20 @@ body {
   background: #0d6efd;
 }
 
-.section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s ease;
+.scroll-top-btn i {
+  font-size: 20px;
+}
+#cv {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
-.section.show-section {
-  opacity: 1;
-  transform: translateY(0);
+#cv .btn {
+  padding: 12px 25px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+#cv .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }

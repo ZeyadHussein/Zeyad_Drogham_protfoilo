@@ -18,7 +18,7 @@ document.querySelectorAll("a[href^='#']").forEach((anchor) => {
 });
 
 const scrollBtn = document.createElement("button");
-scrollBtn.innerHTML = "⬆";
+scrollBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
 scrollBtn.classList.add("scroll-top-btn");
 document.body.appendChild(scrollBtn);
 
