@@ -1,4 +1,6 @@
 console.log("Portfolio Loaded Successfully 🚀");
+
+// Active navbar link toggling
 const navLinks = document.querySelectorAll(".nav-link");
 
 navLinks.forEach((link) => {
@@ -7,16 +9,21 @@ navLinks.forEach((link) => {
     this.classList.add("active");
   });
 });
+
+// Smooth scroll for internal links
 document.querySelectorAll("a[href^='#']").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   });
 });
 
+// Scroll-to-Top Button
 const scrollBtn = document.createElement("button");
 scrollBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
 scrollBtn.classList.add("scroll-top-btn");
@@ -36,6 +43,8 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Scroll Reveal Animation for Sections
 const sections = document.querySelectorAll(".section");
 
 const revealOnScroll = () => {

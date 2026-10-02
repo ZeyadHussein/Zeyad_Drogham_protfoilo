@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <title>Zeyad Dorgham | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Style -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -15,11 +18,11 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold">
+      <a class="navbar-brand fw-bold" href="#">
         <i class="fa-solid fa-code"></i> Zeyad Dorgham
       </a>
 
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -27,63 +30,195 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certificates</a></li>
           <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <header class="hero text-white text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold">Zeyad Dorgham</h1>
-      <p class="lead">Full Stack Developer | BI | ERP | Data & Systems Analysis</p>
-
-      <a href="#projects" class="btn btn-primary btn-lg mt-3">
-        <i class="fa-solid fa-diagram-project"></i> View Projects
-      </a>
+      <h1 class="display-3 fw-bold">Zeyad Dorgham</h1>
+      <p class="lead text-light">Junior IT Technical Support Engineer | Full-Stack Developer | BI & Database Specialist</p>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="#projects" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-diagram-project"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline-light btn-lg">
+          <i class="fa-solid fa-envelope"></i> Contact Me
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">
         <i class="fa-solid fa-user"></i> About Me
       </h2>
-
-      <p class="text-center">
-        Business Information Systems graduate with strong experience in full-stack development,
-        database design, business intelligence, and ERP systems. Skilled in React, Node.js,
-        SQL Server, Power BI, Tableau, and Odoo ERP with full lifecycle project delivery.
-      </p>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <p class="text-center lead">
+            Motivated and detail-oriented Business Information Systems graduate (GPA: 3.72 - Excellent) with hands-on experience in database administration, network security, and data analysis. Skilled in SQL, Microsoft SQL Server, C#, .NET, Angular, React, and Power BI with proven ability to deliver technical solutions and project milestones.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Skills Section (Interactive Tabs) -->
   <section id="skills" class="section bg-light">
     <div class="container">
       <h2 class="section-title">
         <i class="fa-solid fa-gears"></i> Technical Skills
       </h2>
-      <div class="row text-center g-4">
-        <div class="col-md-3"><i class="fa-brands fa-html5"></i><br>HTML & CSS</div>
-        <div class="col-md-3"><i class="fa-brands fa-js"></i><br>JavaScript</div>
-        <div class="col-md-3"><i class="fa-brands fa-angular"></i><br>Angular</div>
-        <div class="col-md-3"><i class="fa-brands fa-react"></i><br>React</div>
-        <div class="col-md-3"><i class="fa-solid fa-server"></i><br>Node.js & .NET</div>
-        <div class="col-md-3"><i class="fa-solid fa-database"></i><br>SQL Server / Oracle / phpMyAdmin</div>
-        <div class="col-md-3"><i class="fa-solid fa-chart-line"></i><br>Power BI & Tableau</div>
-        <div class="col-md-3"><i class="fa-solid fa-boxes-stacked"></i><br>Libraries: Bootstrap & Tailwind</div>
-        <div class="col-md-3"><i class="fa-solid fa-building"></i><br>Odoo ERP & CRM</div>
+
+      <!-- Navigation Tabs -->
+      <ul class="nav nav-pills justify-content-center mb-4" id="skillsTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active fw-semibold" id="frontend-tab" data-bs-toggle="pill" data-bs-target="#frontend-pane" type="button" role="tab">
+            <i class="fa-solid fa-laptop-code me-1"></i> Front-End
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link fw-semibold" id="backend-tab" data-bs-toggle="pill" data-bs-target="#backend-pane" type="button" role="tab">
+            <i class="fa-solid fa-server me-1"></i> Back-End
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link fw-semibold" id="data-tab" data-bs-toggle="pill" data-bs-target="#data-pane" type="button" role="tab">
+            <i class="fa-solid fa-database me-1"></i> Data & Infrastructure
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="skillsTabContent">
+        
+        <!-- Front-End Tab -->
+        <div class="tab-pane fade show active" id="frontend-pane" role="tabpanel">
+          <div class="row text-center g-4 py-3">
+            <div class="col-6 col-md-3"><i class="fa-brands fa-angular text-danger display-5 mb-2"></i><br><strong>Angular</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-react text-info display-5 mb-2"></i><br><strong>React</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-js text-warning display-5 mb-2"></i><br><strong>JavaScript</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-html5 text-danger display-5 mb-2"></i><br><strong>HTML5 & CSS3</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-bootstrap text-primary display-5 mb-2"></i><br><strong>Bootstrap</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-solid fa-wind text-info display-5 mb-2"></i><br><strong>Tailwind CSS</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-figma text-dark display-5 mb-2"></i><br><strong>Figma</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-solid fa-image text-primary display-5 mb-2"></i><br><strong>Photoshop</strong></div>
+          </div>
+        </div>
+
+        <!-- Back-End Tab -->
+        <div class="tab-pane fade" id="backend-pane" role="tabpanel">
+          <div class="row text-center g-4 py-3">
+            <div class="col-6 col-md-3"><i class="fa-solid fa-code text-primary display-5 mb-2"></i><br><strong>C# / .NET</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-node-js text-success display-5 mb-2"></i><br><strong>Node.js</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-php text-primary display-5 mb-2"></i><br><strong>PHP</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-brands fa-python text-warning display-5 mb-2"></i><br><strong>Python</strong></div>
+          </div>
+        </div>
+
+        <!-- Data & Infrastructure Tab -->
+        <div class="tab-pane fade" id="data-pane" role="tabpanel">
+          <div class="row text-center g-4 py-3">
+            <div class="col-6 col-md-3"><i class="fa-solid fa-database text-primary display-5 mb-2"></i><br><strong>SQL Server & Oracle</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-solid fa-chart-column text-warning display-5 mb-2"></i><br><strong>Power BI & Tableau</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-solid fa-server text-info display-5 mb-2"></i><br><strong>Windows Server & AD</strong></div>
+            <div class="col-6 col-md-3"><i class="fa-solid fa-boxes-stacked text-dark display-5 mb-2"></i><br><strong>Odoo ERP & CRM</strong></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Languages Sub-Section -->
+      <div class="mt-5 text-center p-3 bg-white rounded shadow-sm">
+        <h5 class="fw-bold mb-2"><i class="fa-solid fa-language text-primary"></i> Languages</h5>
+        <p class="mb-0"><strong>Arabic:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Advanced &nbsp;|&nbsp; <strong>German:</strong> Intermediate</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fa-solid fa-briefcase"></i> Work Experience
+      </h2>
+      <div class="row g-4">
+        
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">03/2026 - Present</span>
+              <h5 class="card-title fw-bold">Junior IT Technical Support Engineer</h5>
+              <h6 class="text-muted">Mog Energy — Cairo</h6>
+              <ul class="mt-3">
+                <li>Provide technical support for hardware, software, and network-related issues.</li>
+                <li>Assist in installing, configuring, and maintaining IT systems and infrastructure.</li>
+                <li>Support Microsoft environments, including Windows Server and Active Directory.</li>
+                <li>Help manage and troubleshoot Cisco networking devices.</li>
+                <li>Ensure system security, perform updates, and document technical solutions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body">
+              <span class="badge bg-secondary mb-2">08/2024 - 09/2024</span>
+              <h5 class="card-title fw-bold">Development Division Intern</h5>
+              <h6 class="text-muted">BI-Technologies — New Cairo</h6>
+              <ul class="mt-3">
+                <li>Trained in web application testing built with Angular framework.</li>
+                <li>Participated in quality assurance checks and user interface validation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body">
+              <span class="badge bg-secondary mb-2">09/2023 - 10/2023</span>
+              <h5 class="card-title fw-bold">Network Security Intern</h5>
+              <h6 class="text-muted">Egyptian Natural Gas Co. (GASCO) — New Cairo</h6>
+              <ul class="mt-3">
+                <li>Assisted in implementing network security protocols.</li>
+                <li>Conducted security assessments and basic vulnerability testing.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body">
+              <span class="badge bg-secondary mb-2">08/2023 - 09/2023</span>
+              <h5 class="card-title fw-bold">Technical Division Intern</h5>
+              <h6 class="text-muted">BI-Technologies — New Cairo</h6>
+              <ul class="mt-3">
+                <li>Trained in database administration using Microsoft SQL Server.</li>
+                <li>Developed custom reports using Report Builder and Crystal Reports.</li>
+                <li>Created data visualizations and dashboards in Power BI.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section-title">
@@ -250,6 +385,45 @@
     </div>
   </section>
 
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fa-solid fa-certificate"></i> Certifications
+      </h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold"><i class="fa-solid fa-award text-warning me-2"></i> Front-End Web Development</h5>
+              <h6 class="text-muted">Route Academy (July 2025 - Jan 2026)</h6>
+              <ul class="mt-3 text-muted">
+                <li>Proficiency in HTML for web content structuring and CSS for styling and responsive design.</li>
+                <li>Expertise in JavaScript for interactive functionality and dynamic data handling.</li>
+                <li>Skills in Bootstrap for rapid UI development and responsive layouts.</li>
+                <li>Knowledge of the Angular framework for building scalable, component-based web applications.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold"><i class="fa-solid fa-award text-warning me-2"></i> Backend Web Development</h5>
+              <h6 class="text-muted">Route Academy (November 2025 - May 2026)</h6>
+              <ul class="mt-3 text-muted">
+                <li>Proficiency in .NET for building backend frameworks and applications.</li>
+                <li>Expertise in C# for programming logic, algorithms, and server-side functionality.</li>
+                <li>Skills in SQL Server for database design, querying, and data management.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CV Section -->
   <section id="cv" class="section bg-light">
     <div class="container text-center">
@@ -261,45 +435,51 @@
         Download my CV to learn more about my experience, education, and technical skills.
       </p>
       <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="./assets/ZEYAD- DORGHAM CV.pdf" download class="btn btn-primary btn-lg">
+        <a href="./assets/ZEYAD_DORGHAM.pdf" download class="btn btn-primary btn-lg">
           <i class="fa-solid fa-download"></i> Download CV
         </a>
         <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#cvModal">
           <i class="fa-solid fa-eye"></i> Preview CV
         </button>
-
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="section bg-dark text-white">
     <div class="container text-center">
       <h2 class="section-title text-white">
-        <i class="fa-solid fa-envelope"></i> Contact
+        <i class="fa-solid fa-envelope"></i> Contact Me
       </h2>
 
+      <p><i class="fa-solid fa-location-dot me-2"></i> Fifth Settlement, Cairo, Egypt</p>
+
       <p>
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:zeyad02_hussein@hotmail.com" class="no-underline">
+        <i class="fa-solid fa-envelope me-2"></i>
+        <a href="mailto:zeyad02_hussein@hotmail.com" class="text-white text-decoration-none">
           zeyad02_hussein@hotmail.com
         </a>
       </p>
 
-      <p><i class="fa-solid fa-phone"></i> +20 100 179 3955</p>
+      <p><i class="fa-solid fa-phone me-2"></i> +20 100 179 3955</p>
 
-      <a href="https://linkedin.com/in/zeyad-hussein-568097234" target="_blank" class="btn btn-outline-light me-2">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-
-      <a href="https://github.com/ZeyadHussein" target="_blank" class="btn btn-outline-light">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
+      <div class="mt-3">
+        <a href="https://linkedin.com/in/zeyad-hussein-568097234" target="_blank" class="btn btn-outline-light me-2">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/ZeyadHussein" target="_blank" class="btn btn-outline-light me-2">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer class="text-center py-3 bg-black text-white">
     © 2026 Zeyad Dorgham
   </footer>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/index.js"></script>
 
@@ -316,8 +496,7 @@
         </div>
 
         <div class="modal-body" style="height: 80vh;">
-          <iframe src="./assets/ZEYAD- DORGHAM CV.pdf" width="100%" height="100%" style="border-radius:10px;">
-          </iframe>
+          <iframe src="./assets/ZEYAD_DORGHAM.pdf" width="100%" height="100%" style="border-radius:10px;"></iframe>
         </div>
 
       </div>
